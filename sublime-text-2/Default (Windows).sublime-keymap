@@ -1,0 +1,6 @@
+[
+  { "keys": ["f5"], "command": "date" },
+  { "keys": ["ctrl+shift+r"], "command": "reindent" , "args": { "single_line": false } },
+  { "keys": ["ctrl+shift+c"], "command": "filename_to_clipboard" },
+  { "keys": ["ctrl+alt+shift+c"], "command": "path_to_clipboard" }
+]
