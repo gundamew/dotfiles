@@ -23,7 +23,7 @@ function $[0[]0]() {
 }[>END<]!$[FingerTextData FingerTextData]@#
 for
 Lang:PHP
-for ( $i = 0; $i $[0[]0]; ++$i) {
+for ($i = 0; $i $[0[]0]; ++$i) {
   
 }[>END<]!$[FingerTextData FingerTextData]@#
 fe
