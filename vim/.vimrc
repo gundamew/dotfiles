@@ -8,7 +8,6 @@ Bundle 'gmarik/vundle'
 
 " Bundles
 Bundle 'scrooloose/nerdtree'
-Bundle 'ervandew/supertab'
 Bundle 'altercation/vim-colors-solarized'
 
 " Status bar
