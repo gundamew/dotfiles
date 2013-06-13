@@ -89,6 +89,7 @@ alias ll='ls -l'
 alias rm='rm -i'
 alias c='clear'
 alias less='less -rXF'
+alias ld='ls -ld .*'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
