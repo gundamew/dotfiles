@@ -13,6 +13,24 @@ Bundle 'altercation/vim-colors-solarized'
 " Status bar
 set statusline=%<\ %f\ %y[%{&ff}][%{strlen(&fenc)?&fenc:'none'}]%m%r%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ %)
 
+" Encoding
+if has('multi_byte')
+  set fileencodings=utf-8,big5
+if v:lang =~ '^zh_TW'
+  set encoding=big5
+  set termencoding=big5
+  set fileencoding=big5
+endif
+if v:lang =~ 'utf8$' || v:lang =~ 'UTF-8$'
+  set encoding=utf-8
+  set termencoding=utf-8
+  set fileencoding=utf-8
+endif
+else
+  echoerr 'Sorry, this version of (g)vim was not compiled with multi_byte.'
+endif
+set nobomb
+
 " Indent
 set smartindent
 set expandtab
