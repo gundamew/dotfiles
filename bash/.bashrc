@@ -34,21 +34,27 @@ force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+        # We have color support; assume it's compliant with Ecma-48
+        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+        # a case would tend to support setf rather than setaf.)
+        color_prompt=yes
     else
-	color_prompt=
+        color_prompt=
     fi
 fi
 
+   LIGHT_RED="\[\033[1;31m\]"
+ LIGHT_GREEN="\[\033[1;32m\]"
+LIGHT_YELLOW="\[\033[1;33m\]"
+  LIGHT_BLUE="\[\033[1;34m\]"
+LIGHT_PURPLE="\[\033[1;35m\]"
+  LIGHT_CYAN="\[\033[1;36m\]"
+ RESET_COLOR="\[\033[00m\]"
+
 if [ "$color_prompt" = yes ]; then
-    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    PS1='${debian_chroot:+($debian_chroot)}[\[\033[1;32m\]\u@\h\[\033[00m\]: \[\033[1;34m\]\w\[\033[00m\]\[\033[1;31m\]$(parse_git_branch)\[\033[00m\]]\$ '
+    PS1="${debian_chroot:+($debian_chroot)}[${LIGHT_GREEN}\u@\h:${RESET_COLOR} ${LIGHT_CYAN}\w${RESET_COLOR}${LIGHT_RED}\$(parse_git_branch)${RESET_COLOR}]\$ "
 else
-    #PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-    PS1='${debian_chroot:+($debian_chroot)}[\u@\h: \w$(parse_git_branch)]\$ '
+    PS1="${debian_chroot:+($debian_chroot)}[\u@\h: \w$(parse_git_branch)]\$ "
 fi
 unset color_prompt force_color_prompt
 
