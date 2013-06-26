@@ -108,3 +108,8 @@ function parse_git_branch {
 # Set CVS default editor
 export SVN_EDITOR=vim
 export GIT_EDITOR=vim
+
+PATH=$PATH:/home/johnroyer/usr_35/bin
+alias vim=/home/johnroyer/usr_35/bin/vim
+
+. ~/.git_svn_bash_prompt
