@@ -43,16 +43,24 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+         RED="\[\033[31m\]"
    LIGHT_RED="\[\033[1;31m\]"
+       GREEN="\[\033[32m\]"
  LIGHT_GREEN="\[\033[1;32m\]"
+      YELLOW="\[\033[33m\]"
 LIGHT_YELLOW="\[\033[1;33m\]"
+        BLUE="\[\033[34m\]"
   LIGHT_BLUE="\[\033[1;34m\]"
+      PURPLE="\[\033[35m\]"
 LIGHT_PURPLE="\[\033[1;35m\]"
+        CYAN="\[\033[36m\]"
   LIGHT_CYAN="\[\033[1;36m\]"
+       WHITE="\[\033[37m\]"
+ LIGHT_WHITE="\[\033[1;37m\]"
  RESET_COLOR="\[\033[00m\]"
 
 if [ "$color_prompt" = yes ]; then
-    PS1="${debian_chroot:+($debian_chroot)}[${LIGHT_GREEN}\u@\h:${RESET_COLOR} ${LIGHT_CYAN}\w${RESET_COLOR}${LIGHT_RED}\$(parse_git_branch)${RESET_COLOR}]\$ "
+    PS1="${debian_chroot:+($debian_chroot)}[${GREEN}\u@\h:${RESET_COLOR} ${CYAN}\w${RESET_COLOR}${YELLOW}\$(parse_git_branch)${RESET_COLOR}]\$ "
 else
     PS1="${debian_chroot:+($debian_chroot)}[\u@\h: \w$(parse_git_branch)]\$ "
 fi
