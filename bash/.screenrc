@@ -1,0 +1,36 @@
+# ~/.screenrc
+#
+# Ref:
+#   http://napmas.blogspot.tw/2011/09/screenrc.html
+#   http://archerworks.blogspot.tw/2010/05/linuxscreenbindkey.html
+#   http://cytseng.twbbs.org/?p=26
+
+# Turn off startup message
+startup_message off
+
+# Set default encoding
+defencoding UTF-8
+
+# Set status bar
+caption always " %{= KY} #%n: %t@%H %{-} %= %{= KR} Load average: %l %{-} %{= KG} %Y-%m-%d %c:%s %{-} "
+
+# Set tab bar
+hardstatus alwayslastline " %-Lw%{= BW} %n %t %{-}%+Lw "
+
+# C-a b: Set encoding from UTF-8 to Big5
+bind b encoding Big5 UTF-8
+
+# C-a u: Set encoding to UTF-8
+bind u encoding UTF-8
+
+# F8: Kill current window
+bindkey -k k8 kill
+
+# F9: Create a new window
+bindkey -k k9 screen
+
+# Right arrow: Switch to the next window
+bindkey -k kr next
+
+# Left arrow: Switch to the previous window
+bindkey -k kl prev
