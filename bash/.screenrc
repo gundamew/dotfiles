@@ -15,7 +15,7 @@ defencoding UTF-8
 caption always " %{= KY} #%n: %t@%H %{-} %= %{= KR} Load average: %l %{-} %{= KG} %Y-%m-%d %c:%s %{-} "
 
 # Set tab bar
-hardstatus alwayslastline " %-Lw%{= BW} %n %t %{-}%+Lw "
+hardstatus alwayslastline " %-Lw%{= BW} %n%f %t %{-}%+Lw "
 
 # C-a b: Set encoding from UTF-8 to Big5
 bind b encoding Big5 UTF-8
@@ -23,11 +23,11 @@ bind b encoding Big5 UTF-8
 # C-a u: Set encoding to UTF-8
 bind u encoding UTF-8
 
-# F8: Kill current window
-bindkey -k k8 kill
+# F8: Create a new window
+bindkey -k k8 screen
 
-# F9: Create a new window
-bindkey -k k9 screen
+# F9: Kill current window
+bindkey -k k9 kill
 
 # Right arrow: Switch to the next window
 bindkey -k kr next
