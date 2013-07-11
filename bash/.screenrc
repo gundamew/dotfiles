@@ -12,10 +12,11 @@ startup_message off
 defencoding UTF-8
 
 # Set status bar
-caption always " %{= KY} #%n: %t@%H %{-} %= %{= KR} Load average: %l %{-} %{= KG} %Y-%m-%d %c:%s %{-} "
+#caption always " %{= KY} #%n: %t@%H %{-} %= %{= KR} Load average: %l %{-} %{= KG} %Y-%m-%d %c:%s %{-} "
+caption always " %{= ky} #%n: %t@%H %{-} %= %{= kr} Load average: %l %{-} %{= kg} %Y-%m-%d %c:%s %{-} "
 
 # Set tab bar
-hardstatus alwayslastline " %-Lw%{= BW} %n%f %t %{-}%+Lw "
+hardstatus alwayslastline " %-Lw%{= bw} %n%f %t %{-}%+Lw "
 
 # C-a b: Set encoding from UTF-8 to Big5
 bind b encoding Big5 UTF-8
