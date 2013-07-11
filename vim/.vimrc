@@ -9,7 +9,7 @@ Bundle 'gmarik/vundle'
 " Bundles
 Bundle 'scrooloose/nerdtree'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'bling/vim-airline'
+"Bundle 'bling/vim-airline'
 
 " Status bar
 set statusline=%<\ %f\ %y[%{&ff}][%{strlen(&fenc)?&fenc:'none'}]%m%r%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ %)
@@ -50,6 +50,7 @@ syntax on
 set number
 set background=dark
 colorscheme solarized
+set t_Co=256
 
 " Nerdtree
 autocmd VimEnter * NERDTree | wincmd p

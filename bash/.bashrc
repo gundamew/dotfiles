@@ -114,6 +114,12 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
+if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+    export TERM='xterm-256color'
+else
+    export TERM='xterm-color'
+fi
+
 # Show git branch
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\(\1\)/'
