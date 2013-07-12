@@ -1,15 +1,17 @@
 {
-  "color_scheme": "Packages/Solarized Color Scheme/Solarized (dark).tmTheme",
-  "font_face": "Consolas",
-  "font_size": 14,
-  "highlight_line": true,
-  "ignored_packages":
-  [
-    "Vintage"
-  ],
-  "line_padding_bottom": 2,
-  "line_padding_top": 2,
-  "tab_size": 2,
-  "translate_tabs_to_spaces": true,
-  "word_wrap": "false"
+	"color_scheme": "Packages/Solarized Color Scheme/Solarized (dark).tmTheme",
+	"font_face": "Consolas",
+	"font_size": 14,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"line_padding_bottom": 2,
+	"line_padding_top": 2,
+	"tab_size": 2,
+	"theme": "Flatland Dark.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": false
 }
