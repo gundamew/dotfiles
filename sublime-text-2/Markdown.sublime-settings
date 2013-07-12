@@ -1,0 +1,6 @@
+{
+  "draw_centered": false,
+  "trim_trailing_white_space_on_save": true,
+  "match_header_hashes": true,
+  "wrap_width": 80
+}
