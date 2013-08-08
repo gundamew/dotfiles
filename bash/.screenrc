@@ -1,18 +1,13 @@
-# ~/.screenrc
-#
-# Ref:
-#   http://napmas.blogspot.tw/2011/09/screenrc.html
-#   http://archerworks.blogspot.tw/2010/05/linuxscreenbindkey.html
-#   http://cytseng.twbbs.org/?p=26
-
 # Turn off startup message
 startup_message off
+
+# Turn off visual bell
+vbell off
 
 # Set default encoding
 defencoding UTF-8
 
 # Set status bar
-#caption always " %{= KY} #%n: %t@%H %{-} %= %{= KR} Load average: %l %{-} %{= KG} %Y-%m-%d %c:%s %{-} "
 caption always " %{= ky} #%n: %t@%H %{-} %= %{= kr} Load average: %l %{-} %{= kg} %Y-%m-%d %c:%s %{-} "
 
 # Set tab bar
@@ -30,11 +25,8 @@ bindkey -k k8 screen
 # F9: Kill current window
 bindkey -k k9 kill
 
-# Right arrow: Switch to the next window
-bindkey -k F2 next
-
-# Left arrow: Switch to the previous window
+# F11: Switch to the previous window
 bindkey -k F1 prev
 
-# Turn off visual bell
-vbell off
+# F12: Switch to the next window
+bindkey -k F2 next
