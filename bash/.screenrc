@@ -31,10 +31,10 @@ bindkey -k k8 screen
 bindkey -k k9 kill
 
 # Right arrow: Switch to the next window
-#bindkey -k kr next
+bindkey -k F2 next
 
 # Left arrow: Switch to the previous window
-#bindkey -k kl prev
+bindkey -k F1 prev
 
 # Turn off visual bell
 vbell off
