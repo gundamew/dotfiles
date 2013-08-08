@@ -35,3 +35,6 @@ bindkey -k k9 kill
 
 # Left arrow: Switch to the previous window
 #bindkey -k kl prev
+
+# Turn off visual bell
+vbell off
