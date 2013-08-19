@@ -19,9 +19,6 @@ Bundle 'scrooloose/syntastic'
 let g:airline_theme='solarized'
 let g:airline_enable_syntastic=1
 
-" syntastic
-
-
 " Encoding
 if has('multi_byte')
   set fileencodings=utf-8,big5
