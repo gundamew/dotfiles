@@ -9,3 +9,5 @@
   di = diff
 [color]
   ui = true
+[core]
+	autocrlf = true
