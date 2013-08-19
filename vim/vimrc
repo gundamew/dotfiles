@@ -10,12 +10,17 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'bling/vim-airline'
+Bundle 'scrooloose/syntastic'
 
 " Status bar
 "set statusline=%<\ %f\ %y[%{&ff}][%{strlen(&fenc)?&fenc:'none'}]%m%r%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ %)
 
 " Airline
 let g:airline_theme='solarized'
+let g:airline_enable_syntastic=1
+
+" syntastic
+
 
 " Encoding
 if has('multi_byte')
