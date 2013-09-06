@@ -1,6 +1,6 @@
 [user]
-  email = 
-  name = 
+  email = gundamew@gmail.com
+  name = gundamew
 [alias]
   st = status
   ci = commit
@@ -10,4 +10,4 @@
 [color]
   ui = true
 [core]
-	autocrlf = true
+	autocrlf = input
