@@ -14,7 +14,10 @@ Bundle 'bling/vim-airline'
 "set statusline=%<\ %f\ %y[%{&ff}][%{strlen(&fenc)?&fenc:'none'}]%m%r%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ %)
 
 " Airline
+set laststatus=2
 let g:airline_theme='solarized'
+let g:airline_left_sep=''
+let g:airline_right_sep=''
 
 " Encoding
 if has('multi_byte')
