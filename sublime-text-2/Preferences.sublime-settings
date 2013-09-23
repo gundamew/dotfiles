@@ -9,8 +9,10 @@
 	],
 	"line_padding_bottom": 2,
 	"line_padding_top": 2,
+	"soda_classic_tabs": true,
+	"soda_folder_icons": true,
 	"tab_size": 2,
-	"theme": "Flatland Dark.sublime-theme",
+	"theme": "Sodarized Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": false
