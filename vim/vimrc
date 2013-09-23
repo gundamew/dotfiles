@@ -7,17 +7,14 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Bundles
-Bundle 'scrooloose/nerdtree'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'bling/vim-airline'
-Bundle 'scrooloose/syntastic'
 
 " Status bar
 "set statusline=%<\ %f\ %y[%{&ff}][%{strlen(&fenc)?&fenc:'none'}]%m%r%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ %)
 
 " Airline
 let g:airline_theme='solarized'
-let g:airline_enable_syntastic=1
 
 " Encoding
 if has('multi_byte')
@@ -56,11 +53,3 @@ set number
 set background=dark
 set t_Co=256
 colorscheme solarized
-
-" Nerdtree
-autocmd VimEnter * NERDTree | wincmd p
-let g:NERDTreeWinSize=25
-let NERDTreeWinPos="left"
-let NERDTreeMouseMode=2
-let NERDTreeShowHidden=1
-let NERDTreeIgnore=['\.pyc','\~$','\.swo$','\.swp$','\.git','\.hg','\.svn','\.bzr']
