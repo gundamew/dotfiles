@@ -1,6 +1,5 @@
 [
-  { "keys": ["f5"], "command": "date" },
   { "keys": ["ctrl+shift+c"], "command": "filename_to_clipboard" },
-  { "keys": ["ctrl+alt+shift+c"], "command": "path_to_clipboard" },
-  { "keys": ["alt+m"], "command": "markdown_preview", "args": {"target": "browser"} }
+  { "keys": ["alt+m"], "command": "markdown_preview", "args": {"target": "browser"} },
+  { "keys": ["alt+shift+s"], "command": "set_file_type", "args": {"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"} }
 ]
