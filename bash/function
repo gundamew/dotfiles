@@ -1,0 +1,25 @@
+function git_branch() {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\(\1\)/'
+}
+
+function svn_revision() {
+  svn info 2> /dev/null | awk '/^(修訂版:|Revision:)/ { print $2; }'
+}
+
+function svn_local_stat() {
+  REVISION=$(svn_revision)
+  STATE=$(svn status -q 2> /dev/null | grep "^[MA]" | wc -l)
+  if [ $STATE != 0 ]; then
+    echo "@$REVISION(*$STATE)"
+  else
+    echo "@$REVISION"
+  fi
+}
+
+function encode64() {
+  echo -n $1 | base64
+}
+
+function decode64() {
+  echo -n $1 | base64 -d
+}
