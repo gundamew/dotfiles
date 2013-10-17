@@ -5,6 +5,6 @@ export EDITOR="/usr/bin/vim"
 export SVN_EDITOR="/usr/bin/vim"
 export GIT_EDITOR="/usr/bin/vim"
 export GREP_COLOR="1;37;41"
-export GREP_OPTIONS="-rI --color=auto --exclude-dir={.svn,.git}"
+export GREP_OPTIONS="-rI --color=auto --exclude-dir .svn --exclude-dir .git"
 
 [ -f ~/.bashrc ] && . ~/.bashrc
