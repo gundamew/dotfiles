@@ -25,13 +25,18 @@ WHITE="\[\033[37m\]"
 BRIGHT_WHITE="\[\033[1;37m\]"
 RESET_COLOR="\[\033[00m\]"
 
-if [ -e .git ]; then
-  export PS1="[${GREEN}\u@\h:${RESET_COLOR} ${CYAN}\w${RESET_COLOR}${YELLOW}\$(git_branch)${RESET_COLOR}]\$ "
-elif [ -e .svn ]; then
-  export PS1="[${GREEN}\u@\h:${RESET_COLOR} ${CYAN}\w${RESET_COLOR}${YELLOW}\$(svn_local_stat)${RESET_COLOR}]\$ "
-else
-  export PS1="[${GREEN}\u@\h:${RESET_COLOR} ${CYAN}\w${RESET_COLOR}]\$ "
-fi
+function set_bash_prompt() {
+  if [ -e .git ]; then
+    export PS1="[${GREEN}\u@\h:${RESET_COLOR} ${CYAN}\w${RESET_COLOR}${YELLOW}\$(git_branch)${RESET_COLOR}]\$ "
+  elif [ -e .svn ]; then
+    export PS1="[${GREEN}\u@\h:${RESET_COLOR} ${CYAN}\w${RESET_COLOR}${YELLOW}\$(svn_local_stat)${RESET_COLOR}]\$ "
+  else
+    export PS1="[${GREEN}\u@\h:${RESET_COLOR} ${CYAN}\w${RESET_COLOR}]\$ "
+  fi
+}
+
+PROMPT_COMMAND=set_bash_prompt
 
 [ -f ~/.alias ] && . ~/.alias
+
 [ -f ~/.function ] && . ~/.function
