@@ -1,5 +1,5 @@
 [
-  { "keys": ["ctrl+shift+c"], "command": "filename_to_clipboard" },
+  { "keys": ["ctrl+shift+c"], "command": "copy_filename" },
   { "keys": ["alt+m"], "command": "markdown_preview", "args": {"target": "browser"} },
   { "keys": ["alt+shift+s"], "command": "set_file_type", "args": {"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"} }
 ]
