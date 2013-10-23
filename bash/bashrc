@@ -9,6 +9,8 @@ if [ -f /etc/bash_completion ]; then
   source /etc/bash_completion
 fi
 
+PATH=$HOME/local/bin:$PATH
+
 RED="\[\033[31m\]"
 BRIGHT_RED="\[\033[1;31m\]"
 GREEN="\[\033[32m\]"
@@ -40,3 +42,4 @@ PROMPT_COMMAND=set_bash_prompt
 [ -f ~/.alias ] && . ~/.alias
 
 [ -f ~/.function ] && . ~/.function
+
