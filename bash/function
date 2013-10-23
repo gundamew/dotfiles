@@ -27,3 +27,4 @@ function encode64() {
 function decode64() {
   echo -n $1 | base64 -d
 }
+

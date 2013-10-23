@@ -8,3 +8,4 @@ export GREP_COLOR="1;37;41"
 export GREP_OPTIONS="-rI --color=auto --exclude-dir .svn --exclude-dir .git"
 
 [ -f ~/.bashrc ] && . ~/.bashrc
+
