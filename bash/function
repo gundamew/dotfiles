@@ -17,7 +17,7 @@ function svn_local_stat() {
 }
 
 function svn_changed_paths() {
-  svn log -v --stop-on-copy $1 | grep -e '^\s*[MAD]' | cut -c 6- | sed 's/\/dev\/\w*//g' | sort -du | head -n -1
+  svn log -v --stop-on-copy $1 | grep -e '^\s*[MAD]' | cut -c 6- | sed 's/\/dev\/\w*//g' | sort -uV | tail -n +2
 }
 
 function encode64() {
