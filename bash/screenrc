@@ -30,4 +30,3 @@ bindkey -k F1 prev
 
 # F12: Switch to the next window
 bindkey -k F2 next
-
