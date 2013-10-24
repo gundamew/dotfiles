@@ -41,7 +41,7 @@ function set_bash_prompt() {
 
 PROMPT_COMMAND=set_bash_prompt
 
-[ -f ~/.alias ] && . ~/.alias
+[ -f ~/.bash_alias ] && . ~/.bash_alias
 
-[ -f ~/.function ] && . ~/.function
+[ -f ~/.bash_function ] && . ~/.bash_function
 
