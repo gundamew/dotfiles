@@ -15,3 +15,9 @@ fi
 if [ -f $HOME/.bash_profile ]; then
   source $HOME/.bash_profile
 fi
+
+ln -s $HOME/dotfiles/vim/vimrc $HOME/.vimrc
+ln -s $HOME/dotfiles/vim/vim/ $HOME/.vim
+cd $HOME/dotfiles/
+git submodule update --init
+vim +BundleInstall +qall
