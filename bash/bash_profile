@@ -1,10 +1,5 @@
-export HISTCONTROL=ignoreboth
-export LANG="zh_TW.UTF-8"
-export LC_ALL="zh_TW.UTF-8"
-export EDITOR="/usr/bin/vim"
-export SVN_EDITOR="/usr/bin/vim"
-export GIT_EDITOR="/usr/bin/vim"
-export GREP_COLOR="1;37;41"
-export GREP_OPTIONS="-rI --color=auto --exclude-dir .svn --exclude-dir .git"
-
+[ -f ~/.exports ] && . ~/.exports
 [ -f ~/.bashrc ] && . ~/.bashrc
+[ -f ~/.bash_prompt ] && . ~/.bash_prompt
+[ -f ~/.aliases ] && . ~/.aliases
+[ -f ~/.functions ] && . ~/.functions
