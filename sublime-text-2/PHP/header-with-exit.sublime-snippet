@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+header('Location: $1');
+exit();
+]]></content>
+  <tabTrigger>he</tabTrigger>
+  <scope>source.php</scope>
+  <description>header('Location: ...')</description>
+</snippet>
