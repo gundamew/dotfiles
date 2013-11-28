@@ -1,5 +1,8 @@
 [
   { "keys": ["ctrl+shift+c"], "command": "copy_filename" },
   { "keys": ["alt+m"], "command": "markdown_preview", "args": {"target": "browser"} },
-  { "keys": ["alt+shift+s"], "command": "set_file_type", "args": {"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"} }
+  { "keys": ["alt+shift+s"], "command": "set_file_type", "args": {"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"} },
+  { "keys": ["ctrl+t"], "command": "expand_tabs", "args": { "set_translate_tabs": false } },
+  { "keys": ["ctrl+;"], "command": "run_macro_file", "args": {"file": "Packages/User/AddSemicolonToEndOfLine.sublime-macro" } },
+  { "keys": ["ctrl+."], "command": "run_macro_file", "args": {"file": "Packages/User/AddPHPArrayArrow.sublime-macro" } }
 ]
