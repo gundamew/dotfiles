@@ -1,6 +1,8 @@
 {
-  "draw_centered": false,
+  "color_scheme": "Packages/MarkdownEditing/MarkdownEditor-Yellow.tmTheme",
   "trim_trailing_white_space_on_save": true,
-  "match_header_hashes": true,
-  "wrap_width": 80
+  "line_numbers": true,
+  "mde_match_header_hashes": true,
+  "wrap_width": 100
 }
+
