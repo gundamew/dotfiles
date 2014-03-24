@@ -1,6 +1,9 @@
 # Turn off startup message
 startup_message off
 
+# Load shell settings
+shell -$SHELL
+
 # Turn off visual bell
 vbell off
 
