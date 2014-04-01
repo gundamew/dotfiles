@@ -8,7 +8,7 @@ function svn_revision() {
 
 function svn_local_stat() {
   REVISION=$(svn_revision)
-  STATE=$(svn status -q 2> /dev/null | grep "^[MA]" | wc -l)
+  STATE=$(svn status -q 2> /dev/null | grep "^[MAD]" | wc -l)
   if [ $STATE != 0 ]; then
     echo "@$REVISION(*$STATE)"
   else
@@ -27,4 +27,8 @@ function encode64() {
 
 function decode64() {
   echo -n $1 | base64 -d
+}
+
+function reload_dotfiles() {
+  [ -f ~/.bash_profile ] && . ~/.bash_profile
 }
