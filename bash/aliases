@@ -16,6 +16,7 @@ alias now='date +%Y-%m-%d\ %H:%M:%S'
 alias e64=encode64
 alias d64=decode64
 alias schp=svn_changed_paths
+alias r=reload_dotfiles
 
 if [ ! -x "$(which tree 2> /dev/null)" ]; then
   alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
