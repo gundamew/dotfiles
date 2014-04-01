@@ -12,9 +12,3 @@ fi
 if [ -d $HOME/local/bin ]; then
   PATH=$HOME/local/bin:$PATH
 fi
-
-[ -f ~/.bash_prompt ] && . ~/.bash_prompt
-
-[ -f ~/.bash_alias ] && . ~/.bash_alias
-
-[ -f ~/.bash_function ] && . ~/.bash_function
