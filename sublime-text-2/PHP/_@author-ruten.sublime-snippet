@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+@author Steven <bschen@staff.ruten.com.tw>
+]]></content>
+  <tabTrigger>@au-ruten</tabTrigger>
+  <scope>source.php</scope>
+  <description>@author Steven</description>
+</snippet>
