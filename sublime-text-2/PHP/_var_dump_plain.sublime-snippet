@@ -1,7 +1,7 @@
 <snippet>
   <content><![CDATA[
 echo '<pre>';
-var_dump($data);
+var_dump($1);
 echo '</pre>';
 ]]></content>
   <tabTrigger>vdp</tabTrigger>
