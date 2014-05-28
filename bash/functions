@@ -29,6 +29,6 @@ function decode64() {
   echo -n $1 | base64 -d
 }
 
-function reload_dotfiles() {
+function reload_profile() {
   [ -f ~/.bash_profile ] && . ~/.bash_profile
 }
