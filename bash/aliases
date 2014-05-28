@@ -15,7 +15,6 @@ alias now='date +%Y-%m-%d\ %H:%M:%S'
 
 alias e64=encode64
 alias d64=decode64
-alias schp=svn_changed_paths
 alias reload=reload_profile
 
 if [ ! -x "$(which tree 2> /dev/null)" ]; then
