@@ -21,6 +21,10 @@ function svn_changed_files() {
   svn log -v --stop-on-copy $1 | grep -e '^\s*[MAD]' | cut -c 6- | sed 's/\/dev\/\w*//g' | sort -uV | tail -n +2
 }
 
+function svn_di() {
+  svn di $1 --diff-cmd colordiff -x -uwb | iconv -f Big5 -c | less
+}
+
 function encode64() {
   echo -n $1 | base64
 }
