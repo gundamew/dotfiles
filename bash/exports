@@ -1,12 +1,12 @@
 export HISTTIMEFORMAT='%F %T '
 export HISTCONTROL=ignoreboth
 
-export LANG="zh_TW.UTF-8"
-export LC_ALL="zh_TW.UTF-8"
+export LANG='zh_TW.UTF-8'
+export LC_ALL='zh_TW.UTF-8'
 
-export EDITOR="vim"
-export SVN_EDITOR="vim"
-export GIT_EDITOR="vim"
+export EDITOR='vim'
+export SVN_EDITOR='vim'
+export GIT_EDITOR='vim'
 
-export GREP_COLOR="1;37;41"
-export GREP_OPTIONS="-rI --color=auto --exclude-dir .svn --exclude-dir .git"
+export GREP_COLOR='1;37;41'
+export GREP_OPTIONS='-rI --color=auto --exclude-dir .svn --exclude-dir .git'
