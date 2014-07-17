@@ -1,30 +1,3 @@
-function git_branch() {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\(\1\)/'
-}
-
-function svn_revision() {
-  svn info 2> /dev/null | awk '/^(修訂版:|Revision:)/ { print $2; }'
-}
-
-function svn_local_stat() {
-  REVISION=$(svn_revision)
-  STATE=$(svn status -q 2> /dev/null | grep "^[MAD]" | wc -l)
-  if [ $STATE != 0 ]; then
-    echo "@$REVISION(*$STATE)"
-  else
-    echo "@$REVISION"
-  fi
-}
-
-function svn_changed_files() {
-  svn up $1
-  svn log -v --stop-on-copy $1 | grep -e '^\s*[MAD]' | cut -c 6- | sed 's/\/dev\/\w*//g' | sort -uV | tail -n +2
-}
-
-function svn_di() {
-  svn di $1 --diff-cmd colordiff -x -uwb | iconv -f Big5 -c | less
-}
-
 function encode64() {
   echo -n $1 | base64
 }
