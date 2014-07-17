@@ -8,10 +8,7 @@ alias rm='rm -i'
 
 alias less='less -rXF'
 
-alias today_short='date +%Y%m%d'
-alias today='date +%Y-%m-%d'
-alias datetime='date +%Y-%m-%d\ %H:%M:%S'
-
 alias e64=encode64
 alias d64=decode64
+
 alias reload=reload_profile

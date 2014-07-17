@@ -10,3 +10,7 @@ export GIT_EDITOR='vim'
 
 export GREP_COLOR='1;37;41'
 export GREP_OPTIONS='-rI --color=auto --exclude-dir .svn --exclude-dir .git'
+
+export TODAY_SHORT=`date +%Y%m%d`
+export TODAY=`date +%Y-%m-%d`
+export DATETIME=`date +%Y-%m-%d\ %H:%M:%S`
