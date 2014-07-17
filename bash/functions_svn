@@ -20,7 +20,3 @@ function svn_changed_files() {
   svn up $1
   svn log -v --stop-on-copy $1 | grep -e '^\s*[MAD]' | cut -c 6- | sed 's/\/dev\/\w*//g' | sort -uV | tail -n +2
 }
-
-function svn_co() {
-  bash ./script/svn_copy.sh
-}
