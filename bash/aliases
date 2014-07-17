@@ -8,13 +8,10 @@ alias rm='rm -i'
 
 alias less='less -rXF'
 
+alias today_short='date +%Y%m%d'
 alias today='date +%Y-%m-%d'
-alias now='date +%Y-%m-%d\ %H:%M:%S'
+alias datetime='date +%Y-%m-%d\ %H:%M:%S'
 
 alias e64=encode64
 alias d64=decode64
 alias reload=reload_profile
-
-if [ ! -x "$(which tree 2> /dev/null)" ]; then
-  alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
-fi
