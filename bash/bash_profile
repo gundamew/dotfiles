@@ -3,3 +3,8 @@
 [ -f ~/.bash_prompt ] && . ~/.bash_prompt
 [ -f ~/.aliases ] && . ~/.aliases
 [ -f ~/.functions ] && . ~/.functions
+[ -f ~/.functions_svn ] && . ~/.functions_svn
+[ -f ~/.functions_git ] && . ~/.functions_git
+
+[ -f ~/.exports_ruten ] && . ~/.exports_ruten
+[ -f ~/.functions_ruten ] && . ~/.functions_ruten

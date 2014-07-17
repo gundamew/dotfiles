@@ -16,7 +16,7 @@ RESET_COLOR="\[\033[00m\]"
 
 function set_bash_prompt() {
   if [ -e .git ]; then
-    export PS1="[${GREEN}\u@\h:${RESET_COLOR} ${CYAN}\w${RESET_COLOR}${YELLOW}\$(git_branch)${RESET_COLOR}]\$ "
+    export PS1="[${GREEN}\u@\h:${RESET_COLOR} ${CYAN}\w${RESET_COLOR}${YELLOW}\$(git_local_stat)${RESET_COLOR}]\$ "
   elif [ -e .svn ]; then
     export PS1="[${GREEN}\u@\h:${RESET_COLOR} ${CYAN}\w${RESET_COLOR}${YELLOW}\$(svn_local_stat)${RESET_COLOR}]\$ "
   else
