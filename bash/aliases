@@ -8,6 +8,8 @@ alias rm='rm -i'
 
 alias less='less -rXF'
 
+alias logout='history -c && logout'
+
 alias e64=encode64
 alias d64=decode64
 
