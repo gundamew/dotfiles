@@ -18,7 +18,7 @@ function set_branch_name() {
 }
 
 function create_remote_branch() {
-  remote_branch_path=${SVN_REMOTE_DEV}$1
+  remote_branch_path=${SVN_REMOTE_DEV}/$1
   read -p "First comment of new branch: " copy_msg
   svn copy $2 $remote_branch_path -m "$copy_msg" -q
   echo $remote_branch_path
@@ -38,7 +38,7 @@ select copy_from in rtg qa custom; do
       ;;
     custom)
       read -p "Enter the branch name to copy from: " branch_copy_from
-      copy_from=${SVN_REMOTE_DEV}${branch_copy_from}
+      copy_from=${SVN_REMOTE_DEV}/${branch_copy_from}
       ;;
     *)
       exit
@@ -46,6 +46,6 @@ select copy_from in rtg qa custom; do
   esac
   branch_name=$(set_branch_name)
   remote_branch_path=$(create_remote_branch $branch_name $copy_from)
-  checkout_branch $remote_path_branch $branch_name
+  checkout_branch $remote_branch_path $branch_name
   exit
 done
