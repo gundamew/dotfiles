@@ -17,20 +17,22 @@
 function reformat_date_string() {
   case $2 in
     short)
-      echo `date -d $1 +%Y%m%d`
+      echo `date -d $1 $DATE_ISO8601_HYPHEN_OMITTED`
       ;;
     yesterday)
-      echo `date -d "$1 -1 day" +%Y-%m-%d`
+      echo `date -d "$1 -1 day" $DATE_ISO8601`
       ;;
     *)
-      echo `date -d $1 +%Y-%m-%d`
+      echo `date -d $1 $DATE_ISO8601`
       ;;
   esac
 }
 
+today=`date $DATE_ISO8601`
+
 if [ -z $1 ]; then
-  end_date=$(reformat_date_string $TODAY)
-  start_date=$(reformat_date_string $TODAY 'yesterday')
+  end_date=$(reformat_date_string $today)
+  start_date=$(reformat_date_string $today 'yesterday')
 elif [ -z $2 ]; then
   end_date=$(reformat_date_string $1)
   start_date=$(reformat_date_string $end_date 'yesterday')
