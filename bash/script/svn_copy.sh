@@ -13,7 +13,7 @@
 function set_branch_name() {
   read -p "Enter new branch name: " branch_name_postfix
   today=`date $DATE_ISO8601_HYPHEN_OMITTED`
-  branch_name_prefix=${USER}_${TODAY_SHORT}_
+  branch_name_prefix=${USER}_${today}_
   branch_name=${branch_name_prefix}${branch_name_postfix}
   echo $branch_name
 }
