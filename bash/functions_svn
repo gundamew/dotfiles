@@ -8,7 +8,7 @@ function svn_di_big5() {
 
 function svn_local_stat() {
   revision=$(svn_revision)
-  modified_file_amount=$(svn_modified_file_amount)
+  modified_file_amount=$(svn_modified_files_amount)
   if [ $modified_file_amount != 0 ]; then
     echo "@$revision(*$modified_file_amount)"
   else
@@ -44,4 +44,8 @@ function svn_real_working_path() {
   else
     echo `pwd -P`
   fi
+}
+
+function svn_pre_commit_php_lint() {
+  bash ${GIT_LOCAL}/dotfiles/bash/script/php_lint.sh
 }
