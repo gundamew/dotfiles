@@ -25,6 +25,10 @@ function svn_modified_files_amount() {
   svn_modified_files | wc -l
 }
 
+function svn_modified_files_php() {
+  svn_modified_files | grep -P '(?<=\.php)'
+}
+
 function svn_di_big5() {
   svn di $1 --diff-cmd colordiff -x -uwb | iconv -f big5 -c | less
 }
