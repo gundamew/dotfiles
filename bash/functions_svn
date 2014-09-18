@@ -18,7 +18,7 @@ function svn_log_changed_files() {
 }
 
 function svn_modified_files() {
-  svn status . -q 2> /dev/null | grep '^[MAD]'
+  svn status . -q 2> /dev/null | grep -P '(?<=^[MAD])'
 }
 
 function svn_modified_files_amount() {
