@@ -2,10 +2,6 @@ function svn_revision() {
   svn info 2> /dev/null | awk '/^(修訂版:|Revision:)/ { print $2; }'
 }
 
-function svn_modified_file_amount() {
-  svn status . -q 2> /dev/null | grep "^[MAD]" | wc -l
-}
-
 function svn_local_stat() {
   revision=$(svn_revision)
   modified_file_amount=$(svn_modified_file_amount)
@@ -19,6 +15,14 @@ function svn_local_stat() {
 function svn_log_changed_files() {
   svn up $1
   svn log -v --stop-on-copy $1 | grep -e '^\s*[MAD]' | cut -c 6- | sed 's/\/dev\/\w*//g' | sort -uV | tail -n +2
+}
+
+function svn_modified_files() {
+  svn status . -q 2> /dev/null | grep '^[MAD]'
+}
+
+function svn_modified_files_amount() {
+  svn_modified_files | wc -l
 }
 
 function svn_di_big5() {
