@@ -28,3 +28,16 @@ function svn_modified_files_amount() {
 function svn_di_big5() {
   svn di $1 --diff-cmd colordiff -x -uwb | iconv -f big5 -c | less
 }
+
+function svn_real_working_path() {
+  if ! [ -e ./.svn ]; then
+    if [ -z $1 ]; then
+      echo "Warning: '.' is not a working copy."
+      exit
+    else
+      echo `readlink -f $1`
+    fi
+  else
+    echo `pwd -P`
+  fi
+}
