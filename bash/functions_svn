@@ -1,5 +1,5 @@
 function svn_revision() {
-  svn info 2> /dev/null | awk '/^(修訂版:|Revision:)/ { print $2; }'
+  svn info 2> /dev/null | awk '/^(修訂版:|Revision:)/ { print $2 }'
 }
 
 function svn_di_big5() {
@@ -22,7 +22,7 @@ function svn_log_changed_files() {
 }
 
 function svn_modified_files() {
-  svn status . -q 2> /dev/null | grep -P '(?<=^[MAD])'
+  svn status . 2> /dev/null | grep -P '(?<=^[ADMR])'
 }
 
 function svn_modified_files_amount() {
