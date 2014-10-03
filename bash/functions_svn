@@ -46,6 +46,6 @@ function svn_real_working_path() {
   fi
 }
 
-function svn_pre_commit_php_lint() {
-  bash ${GIT_LOCAL}/dotfiles/bash/script/php_lint.sh
+function svn_php_lint() {
+  bash ${GIT_LOCAL}/dotfiles/bash/script/svn_php_lint.sh
 }
