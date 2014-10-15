@@ -18,11 +18,11 @@ function svn_local_stat() {
 
 function svn_log_changed_files() {
   svn up $1
-  svn log -v --stop-on-copy $1 | grep -e '^\s*[MAD]' | cut -c 6- | sed 's/\/dev\/\w*//g' | sort -uV | tail -n +2
+  svn log -v --stop-on-copy $1 | grep -e '^\s*[ADMR]' | cut -c 6- | sed 's/\/dev\/\w*//g' | sort -uV | tail -n +2
 }
 
 function svn_modified_files() {
-  svn status . 2> /dev/null | grep -P '(?<=^[ADMR])'
+  svn status . 2> /dev/null | grep -P '(?<=^[ADMR])' | awk '{ print $2 }'
 }
 
 function svn_modified_files_amount() {
@@ -46,6 +46,6 @@ function svn_real_working_path() {
   fi
 }
 
-function svn_php_lint() {
-  bash ${GIT_LOCAL}/dotfiles/bash/script/svn_php_lint.sh
+function svn_pre_commit() {
+  bash ${GIT_LOCAL}/dotfiles/bash/script/svn_pre_commit.sh
 }
