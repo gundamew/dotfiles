@@ -15,13 +15,13 @@ source ${GIT_LOCAL}/dotfiles/bash/functions_svn
 
 function svn_php_lint() {
   declare -a php_lint_result
-  while read file; do
+  for file in $(svn_modified_files_php); do
     php_lint_error=`php -l $file 2>&1 | grep -i 'parse error'`
 
     if [ -n "$php_lint_error" ]; then
       php_lint_result+=("$php_lint_error")
     fi
-  done < <(svn_modified_files_php)
+  done
 
   if [ ${#php_lint_result[@]} -gt 0 ]; then
     for ((i = 0; i < ${#php_lint_result[@]}; i++)); do
@@ -34,13 +34,13 @@ function svn_php_lint() {
 
 function svn_crlf_checker() {
   declare -a crlf_check_result
-  while read file; do
+  for file in $(svn_modified_files); do
     crlf_amount=`grep -P '\r\n$' $file | wc -l`
 
     if [ $crlf_amount -gt 0 ]; then
       crlf_check_result+=("$file: $crlf_amount")
     fi
-  done < <(svn_modified_files)
+  done
 
   if [ ${#crlf_check_result[@]} -gt 0 ]; then
     for ((i = 0; i < ${#crlf_check_result[@]}; i++)); do
