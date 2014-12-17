@@ -3,6 +3,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
+Plugin 'bling/vim-airline'
 
 " Color schemes
 Plugin 'chriskempson/base16-vim'
@@ -12,6 +13,12 @@ filetype plugin indent on
 
 " Status bar
 "set statusline=%<\ %f\ %y[%{&ff}][%{strlen(&fenc)?&fenc:'none'}]%m%r%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ %)
+
+" vim-airline
+set laststatus=2
+let g:airline_theme='molokai'
+let g:airline_left_sep=''
+let g:airline_right_sep=''
 
 " Encoding
 if has('multi_byte')
