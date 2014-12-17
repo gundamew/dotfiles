@@ -1,14 +1,12 @@
 set nocompatible
-
-" Vundle
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-
-" Bundles
-"Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
+
+" Color schemes
+Plugin 'chriskempson/base16-vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -18,7 +16,6 @@ filetype plugin indent on
 
 " Airline
 set laststatus=2
-"let g:airline_theme='solarized'
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 
@@ -58,4 +55,3 @@ syntax on
 set number
 set background=dark
 set t_Co=256
-"colorscheme solarized
