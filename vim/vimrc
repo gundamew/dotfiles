@@ -2,13 +2,16 @@ set nocompatible
 
 " Vundle
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
 
 " Bundles
-"Bundle 'altercation/vim-colors-solarized'
-Bundle 'bling/vim-airline'
+"Plugin 'altercation/vim-colors-solarized'
+Plugin 'bling/vim-airline'
+
+call vundle#end()
+filetype plugin indent on
 
 " Status bar
 "set statusline=%<\ %f\ %y[%{&ff}][%{strlen(&fenc)?&fenc:'none'}]%m%r%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ %)
