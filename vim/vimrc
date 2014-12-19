@@ -1,58 +1,59 @@
+" First, turn off Vi compatibility mode
 set nocompatible
+
+" Plugin settings
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'bling/vim-airline'
-
-" Color schemes
-Plugin 'chriskempson/base16-vim'
-
 call vundle#end()
 filetype plugin indent on
 
-" Status bar
-"set statusline=%<\ %f\ %y[%{&ff}][%{strlen(&fenc)?&fenc:'none'}]%m%r%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ %)
+" Color settings
+set background=dark
+set t_Co=256
 
-" vim-airline
-set laststatus=2
-let g:airline_theme='molokai'
-let g:airline_left_sep=''
-let g:airline_right_sep=''
-
-" Encoding
-if has('multi_byte')
-  set fileencodings=utf-8,big5
-if v:lang =~ '^zh_TW'
-  set encoding=big5
-  set termencoding=big5
-  set fileencoding=big5
-endif
-if v:lang =~ 'utf8$' || v:lang =~ 'UTF-8$'
-  set encoding=utf-8
-  set termencoding=utf-8
-  set fileencoding=utf-8
-endif
-else
-  echoerr 'Sorry, this version of (g)vim was not compiled with multi_byte.'
-endif
-set nobomb
-
+" Code settings
+syntax on
+set number
+set nowrap
+set showmatch
+set mouse=a
 " Indent
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set smartindent
 set expandtab
-set shiftwidth=2
-set tabstop=2
-set softtabstop=2
 
-" Search
+" Search settings
 set showmatch
 set incsearch
 set hlsearch
-set ignorecase
 
-" Color
-syntax on
-set number
-set background=dark
-set t_Co=256
+" Status line settings
+set laststatus=2
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+
+" File settings
+set fileformat=unix
+set fileformats=unix,dos,mac
+" Unicode w/o BOM
+set encoding=utf-8
+set fileencodings=ucs-bom,utf-8
+set nobomb
+" Handling multibyte characters
+if has('multi_byte')
+    set fileencodings+=big5,cp950
+    set fileencodings+=gbk,cp936,gb18030
+    set fileencodings+=latin1
+    set ambiwidth=double
+else
+    echoerr 'Sorry, this version of (g)vim was not compiled with multi_byte.'
+    set fileencodings+=latin1
+endif
+" Do not backup
+set nobackup
+set noswapfile
