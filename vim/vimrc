@@ -20,6 +20,7 @@ set number
 set nowrap
 set showmatch
 set mouse=a
+" Highlight unwanted characters
 set list
 set listchars=tab:->,trail:#,nbsp:.
 highlight NonText ctermfg=245
