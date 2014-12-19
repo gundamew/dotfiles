@@ -20,6 +20,10 @@ set number
 set nowrap
 set showmatch
 set mouse=a
+set list
+set listchars=tab:->,trail:#,nbsp:.
+highlight NonText ctermfg=245
+highlight SpecialKey ctermfg=245
 " Indent
 set tabstop=2
 set shiftwidth=2
