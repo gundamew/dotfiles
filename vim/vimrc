@@ -1,5 +1,4 @@
-" First, turn off Vi compatibility mode
-set nocompatible
+set nocompatible                             " First, turn off Vi compatibility mode
 
 " Plugin settings
 filetype off
@@ -10,55 +9,53 @@ Plugin 'bling/vim-airline'
 call vundle#end()
 filetype plugin indent on
 
-" Color settings
-set background=dark
-set t_Co=256
-
-" Code settings
-syntax on
-set number
-set nowrap
-set showmatch
-set mouse=a
-" Highlight unwanted characters
-set list
-set listchars=tab:->,trail:#,nbsp:.
-highlight NonText ctermfg=245
-highlight SpecialKey ctermfg=245
-" Indent
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set smartindent
-set expandtab
-
-" Search settings
-set showmatch
-set incsearch
-set hlsearch
-
-" Status line settings
-set laststatus=2
+" vim-airline
+let g:airline_theme='powerlineish'
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 
-" File settings
-set fileformat=unix
-set fileformats=unix,dos,mac
-" Unicode w/o BOM
-set encoding=utf-8
-set fileencodings=ucs-bom,utf-8
-set nobomb
+syntax on                                    " Enable syntax highlighting
+set background=dark                          " Do better syntax highlighting
+set t_Co=256                                 " Make Vim use 256 colors
+
+set number                                   " Print the line number in front of each line
+highlight LineNr ctermfg=15 ctermbg=8        " Change the color used for the line number
+set nowrap                                   " Lines will not wrap
+set showmatch                                " Show matching brackets
+set mouse=a                                  " Enable mouse usage (all modes)
+
+set list                                     " Open list mode
+set listchars=tab:>-,trail:･,eol:$,nbsp:･    " Replace tab, trailing spaces, end-of-line, and non-breakable spaces with symbols
+highlight NonText ctermfg=245                " Show invisible characters
+highlight SpecialKey ctermfg=245             " As above
+
+set tabstop=2                                " Read tab as 2 spaces
+set shiftwidth=2                             " Using 2 spaces for each step of (auto)indent
+set softtabstop=2                            " Inserting a tab using 2 spaces
+set smartindent                              " Do smart autoindenting when starting a new line
+set expandtab                                " Replace tab with spaces
+
+set incsearch                                " Incremental search
+set hlsearch                                 " Highlight all matches
+
+set laststatus=2                             " Displaying status line always
+
+set fileformat=unix                          " Set the end-of-line to Unix style
+set fileformats=unix,dos,mac                 " Automatic end-of-line detection order
+
+set nobackup                                 " Do not backup
+set noswapfile                               " Do not use swapfile
+
 " Handling multibyte characters
-if has('multi_byte')
-    set fileencodings+=big5,cp950
-    set fileencodings+=gbk,cp936,gb18030
-    set fileencodings+=latin1
-    set ambiwidth=double
+if has('multi_byte_encoding')
+  set encoding=utf-8
+  set fileencodings=ucs-bom,utf-8
+  set fileencodings+=big5,cp950
+  set fileencodings+=gbk,cp936,gb18030
+  set fileencodings+=latin1
+  set ambiwidth=double
+  set nobomb
 else
-    echoerr 'Sorry, this version of (g)vim was not compiled with multi_byte.'
-    set fileencodings+=latin1
+  echoerr 'Sorry, this version of (g)vim was not compiled with multi_byte.'
 endif
-" Do not backup
-set nobackup
-set noswapfile
+
