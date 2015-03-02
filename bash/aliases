@@ -1,6 +1,11 @@
 alias ..='cd ..'
 
-alias ls='ls --color=auto'
+if [[ $OSTYPE =~ ^darwin ]]; then
+  alias ls='ls -G'
+else
+  alias ls='ls --color=auto'
+fi
+
 alias ll='ls -l'
 alias la='ls -al'
 alias rm='rm -i'
