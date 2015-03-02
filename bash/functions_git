@@ -8,10 +8,11 @@ function git_modified_file_amount() {
 
 function git_local_stat() {
   local_branch=$(git_local_branch)
-  modified_file_amount=$(git_modified_file_amount)
-  if [ $modified_file_amount != 0 ]; then
-    echo "@$local_branch(*$modified_file_amount)"
-  else
-    echo "@$local_branch"
-  fi
+  #modified_file_amount=$(git_modified_file_amount)
+  #if [ $modified_file_amount != 0 ]; then
+  #  echo "@$local_branch(*$modified_file_amount)"
+  #else
+  #  echo "@$local_branch"
+  #fi
+  echo "@$local_branch"
 }
