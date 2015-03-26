@@ -12,3 +12,5 @@
   ui = true
 [core]
   autocrlf = input
+[branch]
+  autosetuprebase = always
