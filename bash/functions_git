@@ -6,6 +6,10 @@ function git_modified_file_amount() {
   git status . --porcelain 2> /dev/null | wc -l | sed -e 's/^[ \t]*//'
 }
 
+function git_dir_exists() {
+  git rev-parse --is-inside-work-tree 2> /dev/null
+}
+
 function git_local_stat() {
   local_branch=$(git_local_branch)
   modified_file_amount=$(git_modified_file_amount)
