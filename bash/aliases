@@ -6,8 +6,8 @@ else
   alias ls='ls --color=auto'
 fi
 
-alias ll='ls -hl'
-alias la='ls -Ahl'
+alias ll='ls -Fhl'
+alias la='ll -A'
 alias rm='rm -i'
 alias less='less -rXF'
 
