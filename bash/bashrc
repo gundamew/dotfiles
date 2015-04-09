@@ -5,22 +5,9 @@
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-if [ -f /etc/bash_completion ]; then
-  source /etc/bash_completion
-fi
+[ -f /etc/bash_completion ] && source /etc/bash_completion
+[ -f ~/.git-completion.bash ] && source ~/.git-completion.bash
+[ -f ~/.commacd.bash ] && source ~/.commacd.bash
 
-if [ -f ~/.git-completion.bash ]; then
-  source ~/.git-completion.bash
-fi
-
-if [ -f ~/.commacd.bash ]; then
-  source ~/.commacd.bash
-fi
-
-if [ -d $HOME/local/bin ]; then
-  PATH=$HOME/local/bin:$PATH
-fi
-
-if [ -d /usr/local/bin ]; then
-  PATH=/usr/local/bin:$PATH
-fi
+[ -d $HOME/local/bin ] && PATH=$HOME/local/bin:$PATH
+[ -d /usr/local/bin ] && PATH=/usr/local/bin:$PATH
