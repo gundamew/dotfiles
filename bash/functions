@@ -7,5 +7,5 @@ function decode64() {
 }
 
 function reload_profile() {
-  [ -f ~/.bash_profile ] && . ~/.bash_profile
+  [ -f ~/.bash_profile ] && source ~/.bash_profile
 }
