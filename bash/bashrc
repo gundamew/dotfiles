@@ -13,6 +13,10 @@ if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
 
+if [ -f ~/.commacd.bash ]; then
+  source ~/.commacd.bash
+fi
+
 if [ -d $HOME/local/bin ]; then
   PATH=$HOME/local/bin:$PATH
 fi
