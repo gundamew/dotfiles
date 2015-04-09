@@ -10,7 +10,12 @@ export SVN_EDITOR='vim'
 export GIT_EDITOR='vim'
 
 export GREP_COLOR='1;37;41'
-export GREP_OPTIONS='-rI --color=auto --exclude-dir .svn --exclude-dir .git'
+
+if [[ $OSTYPE =~ ^darwin ]]; then
+  export GREP_OPTIONS='-I --color=auto'
+else
+  export GREP_OPTIONS='-rI --color=auto --exclude-dir .svn --exclude-dir .git'
+fi
 
 export DATE_ISO8601_HYPHEN_OMITTED='+%Y%m%d'
 export DATE_ISO8601='+%Y-%m-%d'
