@@ -5,6 +5,3 @@
 [ -f ~/.functions ] && source ~/.functions
 [ -f ~/.functions_svn ] && source ~/.functions_svn
 [ -f ~/.functions_git ] && source ~/.functions_git
-
-[ -f ~/.exports_ruten ] && source ~/.exports_ruten
-[ -f ~/.functions_ruten ] && source ~/.functions_ruten
