@@ -1,10 +1,10 @@
-[ -f ~/.exports ] && . ~/.exports
-[ -f ~/.bashrc ] && . ~/.bashrc
-[ -f ~/.bash_prompt ] && . ~/.bash_prompt
-[ -f ~/.aliases ] && . ~/.aliases
-[ -f ~/.functions ] && . ~/.functions
-[ -f ~/.functions_svn ] && . ~/.functions_svn
-[ -f ~/.functions_git ] && . ~/.functions_git
+[ -f ~/.exports ] && source ~/.exports
+[ -f ~/.bashrc ] && source ~/.bashrc
+[ -f ~/.bash_prompt ] && source ~/.bash_prompt
+[ -f ~/.aliases ] && source ~/.aliases
+[ -f ~/.functions ] && source ~/.functions
+[ -f ~/.functions_svn ] && source ~/.functions_svn
+[ -f ~/.functions_git ] && source ~/.functions_git
 
-[ -f ~/.exports_ruten ] && . ~/.exports_ruten
-[ -f ~/.functions_ruten ] && . ~/.functions_ruten
+[ -f ~/.exports_ruten ] && source ~/.exports_ruten
+[ -f ~/.functions_ruten ] && source ~/.functions_ruten
