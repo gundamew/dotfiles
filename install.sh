@@ -9,7 +9,7 @@ if [ -d $HOME/dotfiles/bash ]; then
   ln -s $HOME/dotfiles/bash/bashrc $HOME/.bashrc
   ln -s $HOME/dotfiles/bash/bash_prompt $HOME/.bash_prompt
   ln -s $HOME/dotfiles/bash/functions $HOME/.functions
-  ln -s $HOME/dotfiles/bash/aliases $HOME/.aliases
+  ln -s $HOME/dotfiles/bash/bash_aliases $HOME/.bash_aliases
   ln -s $HOME/dotfiles/bash/screenrc $HOME/.screenrc
 
   # vim
