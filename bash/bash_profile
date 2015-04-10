@@ -1,7 +1,7 @@
 [ -f ~/.exports ] && source ~/.exports
 [ -f ~/.bashrc ] && source ~/.bashrc
 [ -f ~/.bash_prompt ] && source ~/.bash_prompt
-[ -f ~/.aliases ] && source ~/.aliases
+[ -f ~/.bash_aliases ] && source ~/.bash_aliases
 [ -f ~/.functions ] && source ~/.functions
 [ -f ~/.functions_svn ] && source ~/.functions_svn
 [ -f ~/.functions_git ] && source ~/.functions_git
