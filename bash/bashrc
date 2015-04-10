@@ -6,6 +6,3 @@
 shopt -s checkwinsize
 
 [ -f $(brew --prefix)/etc/bash_completion ] && source $(brew --prefix)/etc/bash_completion
-
-[ -d $HOME/local/bin ] && PATH=$HOME/local/bin:$PATH
-[ -d /usr/local/bin ] && PATH=/usr/local/bin:$PATH
