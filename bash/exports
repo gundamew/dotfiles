@@ -1,3 +1,5 @@
+export PATH=/usr/local/sbin:$PATH
+
 export HISTTIMEFORMAT='%F %T '
 export HISTCONTROL=ignoreboth
 export HISTFILE='/dev/null'
@@ -9,13 +11,7 @@ export EDITOR='vim'
 export SVN_EDITOR='vim'
 export GIT_EDITOR='vim'
 
-export GREP_COLOR='1;37;41'
-
-if [[ $OSTYPE =~ ^darwin ]]; then
-  export GREP_OPTIONS='-I --color=auto'
-else
-  export GREP_OPTIONS='-rI --color=auto --exclude-dir .svn --exclude-dir .git'
-fi
+export GREP_COLORS='fn:ln=33:se=37:mt=1;37;41'
 
 export DATE_ISO8601_HYPHEN_OMITTED='+%Y%m%d'
 export DATE_ISO8601='+%Y-%m-%d'
