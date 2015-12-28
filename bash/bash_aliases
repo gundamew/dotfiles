@@ -1,6 +1,6 @@
 alias ..='cd ..'
 
-if [[ $OSTYPE =~ ^darwin ]]; then
+if [ $(uname -s) == 'Darwin' ]; then
   alias ls='ls -G'
 else
   alias ls='ls --color=auto'
