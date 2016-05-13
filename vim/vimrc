@@ -49,6 +49,7 @@ set nobackup                                 " Do not backup
 set noswapfile                               " Do not use swapfile
 
 set backspace=indent,eol,start               " Allow the backspace/delete key to behave normally
+set colorcolumn=80                           " Setup a line length marker
 
 " Handling multibyte characters
 if has('multi_byte_encoding')
