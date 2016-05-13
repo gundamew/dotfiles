@@ -1,6 +1,8 @@
 [user]
-  email = gundamew@gmail.com
-  name = gundamew
+  email = bschen@panmedia.asia
+  name = bschen
+[github]
+  user = Bing-Sheng Chen
 [alias]
   st = status -sb
   ci = commit
@@ -12,5 +14,8 @@
   ui = true
 [core]
   autocrlf = input
+  excludesfile = ~/.gitignore_global
 [branch]
   autosetuprebase = always
+[diff]
+  mnemonicprefix = true
