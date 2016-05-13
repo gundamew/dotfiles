@@ -1,10 +1,14 @@
 [submodule "vim/vim/bundle/Vundle.vim"]
 	path = vim/vim/bundle/Vundle.vim
-	url = git@github.com:gmarik/Vundle.vim.git
+	url = git@github.com:VundleVim/Vundle.vim.git
 	branch = master
 [submodule "vim/vim/bundle/vim-airline"]
 	path = vim/vim/bundle/vim-airline
-	url = git@github.com:bling/vim-airline.git
+	url = git@github.com:vim-airline/vim-airline.git
+	branch = master
+[submodule "vim/vim/bundle/vim-airline-themes"]
+	path = vim/vim/bundle/vim-airline-themes
+	url = git@github.com:vim-airline/vim-airline-themes.git
 	branch = master
 [submodule "vim/vim/bundle/base16-vim"]
 	path = vim/vim/bundle/base16-vim
