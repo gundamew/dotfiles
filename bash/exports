@@ -1,4 +1,5 @@
-export PATH=/usr/local/sbin:$PATH
+export PATH=/usr/local/mysql/bin:$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH
+export MANPATH=$(brew --prefix coreutils)/libexec/gnuman:$MANPATH
 
 export HISTTIMEFORMAT='%F %T '
 export HISTCONTROL=ignoreboth
@@ -17,8 +18,8 @@ export DATE_ISO8601_HYPHEN_OMITTED='+%Y%m%d'
 export DATE_ISO8601='+%Y-%m-%d'
 export DATETIME_ISO8601='+%Y-%m-%d\ %H:%M:%S'
 
-if [ -e /usr/share/terminfo/x/xterm-256color ]; then
-  export TERM='xterm-256color'
-else
-  export TERM='xterm-color'
-fi
+#if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+#  export TERM='xterm-256color'
+#else
+#  export TERM='xterm-color'
+#fi
