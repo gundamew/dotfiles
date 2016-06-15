@@ -1,5 +1,10 @@
-export PATH=/usr/local/mysql/bin:$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH
-export MANPATH=$(brew --prefix coreutils)/libexec/gnuman:$MANPATH
+export PATH=/usr/local/mysql/bin:$(brew --prefix coreutils)/libexec/gnubin:/usr/local/sbin:/usr/local/bin:$PATH
+
+if [ -z $MANPATH ]; then
+    export MANPATH=$(brew --prefix coreutils)/libexec/gnuman
+else
+    export MANPATH=$(brew --prefix coreutils)/libexec/gnuman:$MANPATH
+fi
 
 export HISTTIMEFORMAT='%F %T '
 export HISTCONTROL=ignoreboth
