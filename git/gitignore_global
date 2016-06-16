@@ -1,7 +1,7 @@
 # Global
 config.php
 .DS_Store
+img/
 
 # WordPress
 wp-onfig.php
-
