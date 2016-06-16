@@ -20,15 +20,15 @@ function reformat_date_string() {
       echo `date -d $1 +%Y%m%d`
       ;;
     yesterday)
-      echo `date -d "$1 -1 day" $DATE_ISO8601`
+      echo `date -d "$1 -1 day" +%Y-%m-%d`
       ;;
     *)
-      echo `date -d $1 $DATE_ISO8601`
+      echo `date -d $1 +%Y-%m-%d`
       ;;
   esac
 }
 
-today=`date $DATE_ISO8601`
+today=`date +%Y-%m-%d`
 
 if [ -z $1 ]; then
   end_date=$(reformat_date_string $today)
