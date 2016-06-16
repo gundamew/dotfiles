@@ -1,9 +1,9 @@
 export PATH=/usr/local/mysql/bin:$(brew --prefix coreutils)/libexec/gnubin:/usr/local/sbin:/usr/local/bin:$PATH
 
 if [ -z $MANPATH ]; then
-    export MANPATH=$(brew --prefix coreutils)/libexec/gnuman
+    export MANPATH=$(brew --prefix coreutils)/libexec/gnuman:/usr/local/share/man:/usr/share/man
 else
-    export MANPATH=$(brew --prefix coreutils)/libexec/gnuman:$MANPATH
+    export MANPATH=$(brew --prefix coreutils)/libexec/gnuman:/usr/local/share/man:/usr/share/man:$MANPATH
 fi
 
 export HISTTIMEFORMAT='%F %T '
