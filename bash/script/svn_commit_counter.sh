@@ -17,7 +17,7 @@
 function reformat_date_string() {
   case $2 in
     short)
-      echo `date -d $1 $DATE_ISO8601_HYPHEN_OMITTED`
+      echo `date -d $1 +%Y%m%d`
       ;;
     yesterday)
       echo `date -d "$1 -1 day" $DATE_ISO8601`
