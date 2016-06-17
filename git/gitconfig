@@ -1,27 +1,57 @@
+# Wow
 [user]
-  email = bschen@panmedia.asia
-  name = bschen
+    email = bschen@panmedia.asia
+    name = bschen
 [github]
-  user = Bing-Sheng Chen
+    user = Bing-Sheng Chen
+
+# Such aliases
 [alias]
-  st = status -s
-  ci = commit
-  co = checkout
-  lg = log --graph --pretty=format:'%Cred%h%Creset-%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-  di = diff
-  br = branch
-[color]
-  ui = true
+    st = status -s
+    ci = commit
+    co = checkout
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue bold)<%an>%Creset'
+    di = diff
+    br = branch
+
+# Very core
 [core]
-  autocrlf = input
-  excludesfile = ~/.gitignore_global
-  pager = diff-highlight | less
+    autocrlf = input
+    excludesfile = ~/.gitignore_global
+    pager = diff-highlight | less
 [branch]
-  autosetuprebase = always
+    autosetuprebase = always
 [diff]
-  mnemonicprefix = true
-  compactionHeuristic = true
+    mnemonicprefix = true
+    compactionHeuristic = true
 [pager]
-  log = diff-highlight | less
-  show = diff-highlight | less
-  diff = diff-highlight | less
+    log = diff-highlight | less
+    show = diff-highlight | less
+    diff = diff-highlight | less
+
+# So much color
+[color]
+    ui = auto
+    branch = auto
+    diff = auto
+    status = auto
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+[color "diff"]
+    meta = yellow bold
+    commit = green bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+[color "diff-highlight"]
+    oldNormal = red bold
+    oldHighlight = red bold 52
+    newNormal = green bold
+    newHighlight = green bold 22
