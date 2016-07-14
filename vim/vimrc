@@ -19,7 +19,7 @@ let g:airline_right_sep=''
 syntax on                                    " Enable syntax highlighting
 set background=dark                          " Do better syntax highlighting
 set t_Co=256                                 " Make Vim use 256 colors
-colorscheme base16-tomorrow                  " Use Base16 color scheme
+"colorscheme base16-tomorrow                  " Use Base16 color scheme
 
 set number                                   " Print the line number in front of each line
 highlight LineNr ctermfg=15 ctermbg=8        " Change the color used for the line number
