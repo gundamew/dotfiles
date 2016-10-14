@@ -1,8 +1,18 @@
 # Global
-config.php
+*.cnf
+
+# macOS
 .DS_Store
-img/**
-audio/**
+
+# PHP
+config.php
 
 # WordPress
-wp-onfig.php
+wp-config.php
+
+# Composer
+vendor/
+composer.phar
+
+# Node.js
+node_modules/
