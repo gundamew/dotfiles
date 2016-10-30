@@ -16,5 +16,3 @@ alias reload=reload_profile
 alias sshptt='ssh ptt.cc -l bbsu'
 
 alias random='curl -X GET -H "Cache-Control: no-cache" "https://www.random.org/strings/?num=10&len=10&digits=on&upperalpha=on&loweralpha=on&unique=on&format=plain&rnd=new"'
-
-alias composer='/usr/bin/env php -n /usr/local/bin/composer.phar'
