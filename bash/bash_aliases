@@ -13,10 +13,6 @@ alias d64=decode64
 
 alias reload=reload_profile
 
-alias ssh140='ssh 202.3.179.140 -l bschen'
-alias ssh141='ssh 202.3.179.141 -l bschen'
-alias ssh142='ssh 202.3.179.142 -l bschen'
-
 alias sshptt='ssh ptt.cc -l bbsu'
 
 alias random='curl -X GET -H "Cache-Control: no-cache" "https://www.random.org/strings/?num=10&len=10&digits=on&upperalpha=on&loweralpha=on&unique=on&format=plain&rnd=new"'
