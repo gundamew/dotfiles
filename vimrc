@@ -1,15 +1,9 @@
 set nocompatible                             " First, turn off Vi compatibility mode
 
-" Plugin settings
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'chriskempson/base16-vim'
-call vundle#end()
-filetype plugin indent on
+" vim-plug
+call plug#begin('~/.vim/plugged')
+Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
+call plug#end()
 
 " vim-airline
 let g:airline_theme='powerlineish'
@@ -19,7 +13,6 @@ let g:airline_right_sep=''
 syntax on                                    " Enable syntax highlighting
 set background=dark                          " Do better syntax highlighting
 set t_Co=256                                 " Make Vim use 256 colors
-"colorscheme base16-tomorrow                  " Use Base16 color scheme
 
 set number                                   " Print the line number in front of each line
 highlight LineNr ctermfg=15 ctermbg=8        " Change the color used for the line number
@@ -52,17 +45,3 @@ set noswapfile                               " Do not use swapfile
 
 set backspace=indent,eol,start               " Allow the backspace/delete key to behave normally
 set colorcolumn=80                           " Setup a line length marker
-
-" Handling multibyte characters
-if has('multi_byte_encoding')
-  set encoding=utf-8
-  set fileencodings=ucs-bom,utf-8
-  set fileencodings+=big5,cp950
-  set fileencodings+=gbk,cp936,gb18030
-  set fileencodings+=latin1
-  set ambiwidth=double
-  set nobomb
-else
-  echoerr 'Sorry, this version of (g)vim was not compiled with multi_byte.'
-endif
-
