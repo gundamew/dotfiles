@@ -17,8 +17,6 @@ alias grep='grep --color=auto'
 
 alias sshptt='ssh ptt.cc -l bbsu'
 alias random='curl -X GET -H "Cache-Control: no-cache" "https://www.random.org/strings/?num=10&len=10&digits=on&upperalpha=on&loweralpha=on&unique=on&format=plain&rnd=new"'
-alias brewup='brew update && brew upgrade && brew cleanup'
-alias gitrenew='sudo git reset HEAD^ && sudo git co -- . && sudo git pull origin master'
 
 # export
 export PATH=/usr/local/mysql/bin:/usr/local/sbin:/usr/local/bin:$PATH
