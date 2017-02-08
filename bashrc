@@ -13,6 +13,7 @@ alias ls='ls -G'
 alias ll='ls -hl'
 alias la='ll -A'
 alias rm='rm -i'
+alias cat='cat -n'
 alias grep='grep --color=auto'
 
 alias sshptt='ssh ptt.cc -l bbsu'
