@@ -6,6 +6,7 @@
 
 # PHP
 config.php
+settings.php
 
 # WordPress
 wp-config.php
