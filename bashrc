@@ -7,6 +7,12 @@
 # bash_prompt
 [ -f ~/.bash-powerline.sh ] && source ~/.bash-powerline.sh
 
+# The next line updates PATH for the Google Cloud SDK.
+[ -f /usr/local/google-cloud-sdk/path.bash.inc ] && source /usr/local/google-cloud-sdk/path.bash.inc
+
+# The next line enables shell command completion for gcloud.
+[ -f /usr/local/google-cloud-sdk/completion.bash.inc ] && source /usr/local/google-cloud-sdk/completion.bash.inc
+
 # alias
 alias ..='cd ..'
 alias ls='ls -G'
