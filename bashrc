@@ -15,6 +15,7 @@ alias la='ll -A'
 alias rm='rm -i'
 alias cat='cat -n'
 alias grep='grep --color=auto'
+alias phpunit='phpunit --color'
 
 alias sshptt='ssh ptt.cc -l bbsu'
 alias random='curl -X GET -H "Cache-Control: no-cache" "https://www.random.org/strings/?num=10&len=10&digits=on&upperalpha=on&loweralpha=on&unique=on&format=plain&rnd=new"'
