@@ -1,0 +1,6 @@
+# Linux aliases
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+
+# Linux exports
+export GREP_COLORS='fn:ln=33:se=37:mt=1;37;41'

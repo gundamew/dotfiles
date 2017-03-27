@@ -2,7 +2,7 @@
 [[ -z "$PS1" ]] && return
 
 # bash_completion
-[[ -f $(brew --prefix)/etc/bash_completion ]] && source $(brew --prefix)/etc/bash_completion
+[[ -f $(brew --prefix)/etc/bash_completion ]] && source $(brew --prefix)/etc/bash_completion || source /usr/share/bash-completion/bash_completion
 
 # bash_prompt
 [[ -f ~/.bash-powerline.sh ]] && source ~/.bash-powerline.sh
@@ -13,21 +13,23 @@
 # The next line enables shell command completion for gcloud.
 [[ -f /usr/local/google-cloud-sdk/completion.bash.inc ]] && source /usr/local/google-cloud-sdk/completion.bash.inc
 
-# alias
+# Include some aliases and exports by OS
+[[ $(uname -s) = "Darwin" ]] && source ~/dotfiles/bashrc.macos || source ~/dotfiles/bashrc.linux
+
+# Common aliases
 alias ..='cd ..'
-alias ls='ls -G'
 alias ll='ls -hl'
 alias la='ll -A'
 alias rm='rm -i'
 alias cat='cat -n'
-alias grep='grep --color=auto'
+
 alias phpunit='phpunit --color'
 
 alias sshptt='ssh ptt.cc -l bbsu'
 alias random='curl -X GET -H "Cache-Control: no-cache" "https://www.random.org/strings/?num=10&len=10&digits=on&upperalpha=on&loweralpha=on&unique=on&format=plain&rnd=new"'
 
-# export
-export PATH=/usr/local/mysql/bin:/usr/local/sbin:/usr/local/bin:$PATH
+# Common exports
+export PATH=/usr/local/mysql/bin:/usr/local/sbin:/usr/local/bin:$HOME/.composer/vendor/bin:$PATH
 
 export HISTTIMEFORMAT='%F %T '
 export HISTCONTROL=ignoreboth

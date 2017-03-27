@@ -1,0 +1,3 @@
+# macOS aliases
+alias ls='ls -G'
+alias ack='ack --color-match="bold bright_red" --color-filename=magenta --color-lineno=yellow'
