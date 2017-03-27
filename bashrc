@@ -2,7 +2,7 @@
 [[ -z "$PS1" ]] && return
 
 # bash_completion
-[[ -f $(brew --prefix)/etc/bash_completion ]] && source $(brew --prefix)/etc/bash_completion || source /usr/share/bash-completion/bash_completion
+[[ $(type -P brew) ]] && source $(brew --prefix)/etc/bash_completion || source /usr/share/bash-completion/bash_completion
 
 # bash_prompt
 [[ -f ~/.bash-powerline.sh ]] && source ~/.bash-powerline.sh
