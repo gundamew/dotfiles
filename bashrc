@@ -1,17 +1,17 @@
 # If not running interactively, don't do anything
-[ -z "$PS1" ] && return
+[[ -z "$PS1" ]] && return
 
 # bash_completion
-[ -f $(brew --prefix)/etc/bash_completion ] && source $(brew --prefix)/etc/bash_completion
+[[ -f $(brew --prefix)/etc/bash_completion ]] && source $(brew --prefix)/etc/bash_completion
 
 # bash_prompt
-[ -f ~/.bash-powerline.sh ] && source ~/.bash-powerline.sh
+[[ -f ~/.bash-powerline.sh ]] && source ~/.bash-powerline.sh
 
 # The next line updates PATH for the Google Cloud SDK.
-[ -f /usr/local/google-cloud-sdk/path.bash.inc ] && source /usr/local/google-cloud-sdk/path.bash.inc
+[[ -f /usr/local/google-cloud-sdk/path.bash.inc ]] && source /usr/local/google-cloud-sdk/path.bash.inc
 
 # The next line enables shell command completion for gcloud.
-[ -f /usr/local/google-cloud-sdk/completion.bash.inc ] && source /usr/local/google-cloud-sdk/completion.bash.inc
+[[ -f /usr/local/google-cloud-sdk/completion.bash.inc ]] && source /usr/local/google-cloud-sdk/completion.bash.inc
 
 # alias
 alias ..='cd ..'

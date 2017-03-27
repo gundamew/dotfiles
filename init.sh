@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 # Rename original files
-[ -f ~/.bash_logout ] && mv ~/.bash_logout ~/.bash_logout.orig
-[ -f ~/.bashrc ] && mv ~/.bashrc ~/.bashrc.orig
-[ -f ~/.vimrc ] && mv ~/.vimrc ~/.vimrc.orig
+[[ -f ~/.bash_logout ]] && mv ~/.bash_logout ~/.bash_logout.orig
+[[ -f ~/.bashrc ]] && mv ~/.bashrc ~/.bashrc.orig
+[[ -f ~/.vimrc ]] && mv ~/.vimrc ~/.vimrc.orig
 
 # Create symbolic links
 ln -s ~/dotfiles/bash-powerline/bash-powerline.sh ~/.bash-powerline.sh
