@@ -15,6 +15,9 @@ wp-config.php
 vendor/
 composer.phar
 
+# Phinx
+phinx.yml
+
 # Node.js
 node_modules/
 
