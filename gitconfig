@@ -1,9 +1,7 @@
 # Wow
 [user]
-    email = bschen@panmedia.asia
-    name = bschen
-[github]
-    user = Bing-Sheng Chen
+    name = Bing-Sheng Chen
+    useconfigonly = true
 
 # Such aliases
 [alias]
