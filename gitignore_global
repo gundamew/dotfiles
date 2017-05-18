@@ -14,7 +14,7 @@ backup/
 cache/
 
 # Composer
-vendor/
+/vendor/
 composer.phar
 
 # Phinx
