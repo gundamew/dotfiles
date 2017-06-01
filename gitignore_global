@@ -1,27 +1,3 @@
-# Global
-*.cnf
-
-# macOS
 .DS_Store
-
-# PHP
-config.php
-settings.php
-
-# WordPress
-wp-config.php
-backup/
-cache/
-
-# Composer
-/vendor/
-composer.phar
-
-# Phinx
-phinx.yml
-
-# Node.js
-node_modules/
-
-# VS Code
 .vscode/
+*.log
