@@ -22,6 +22,7 @@ alias ll='ls -hl'
 alias la='ll -A'
 alias rm='rm -i'
 alias cat='cat -n'
+alias grep='grep --color=auto'
 
 alias phpunit='phpunit --color'
 
