@@ -8,7 +8,7 @@
 
 ## Steps to Reproduce
 
-重現問題的最少步驟
+重現問題的最少步驟。範例：
 
 1. 把冰箱門打開
 2. 把大象放進冰箱
@@ -25,14 +25,15 @@
 ## Error Messages
 
 > `[#44] Refrigerator Error: incompatible elephant.`
-> `[Err] Insurance company not found.`
+> 
+> `[#88] Insurance company not found.`
 
 ## Your Environment
 
-- 瀏覽器種類與版本
-- 作業系統種類與版本
-- 大象的年齡和品種
-- 保險合約內容
+* 瀏覽器種類與版本
+* 作業系統種類與版本
+* 大象的年齡和品種
+* 保險合約內容
 
 ## Possible Solution
 
