@@ -16,6 +16,19 @@
 # Include some aliases and exports by OS
 [[ $(uname -s) = "Darwin" ]] && source ~/dotfiles/bashrc.macos || source ~/dotfiles/bashrc.linux
 
+# Add an error notification for Git
+# Ref: https://stackoverflow.com/a/35904417
+git() {
+    command git "$@"
+    local exit_code=$?
+    if [[ $exit_code -ne 0 ]]; then
+        printf "\n"
+        printf "\033[1;31mERROR: git exited with code $exit_code\033[0m\n"
+        printf "\n"
+        return $exit_code
+    fi
+}
+
 # Common aliases
 alias ..='cd ..'
 alias ll='ls -hl'
