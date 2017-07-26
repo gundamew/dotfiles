@@ -43,7 +43,7 @@ alias sshptt='ssh ptt.cc -l bbsu'
 alias random='curl -X GET -H "Cache-Control: no-cache" "https://www.random.org/strings/?num=10&len=10&digits=on&upperalpha=on&loweralpha=on&unique=on&format=plain&rnd=new"'
 
 # Common exports
-export PATH=/usr/local/mysql/bin:/usr/local/sbin:/usr/local/bin:$HOME/.composer/vendor/bin:./vendor/bin:./node_modules/.bin:$PATH
+export PATH=/usr/local/mysql/bin:/usr/local/sbin:/usr/local/bin:$HOME/.composer/vendor/bin:vendor/bin:node_modules/.bin:$PATH
 
 export HISTTIMEFORMAT='%F %T '
 export HISTCONTROL=ignoreboth
