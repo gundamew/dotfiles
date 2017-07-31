@@ -29,6 +29,15 @@ git() {
     fi
 }
 
+# Ensure to use WP-CLI files within the same scope
+wp() {
+    if [[ -x vendor/bin/wp ]]; then
+        vendor/bin/wp "$@"
+    else
+        /usr/local/bin/wp "$@"
+    fi
+}
+
 # Common aliases
 alias ..='cd ..'
 alias ll='ls -hl'
