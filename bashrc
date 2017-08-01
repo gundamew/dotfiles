@@ -20,12 +20,12 @@
 # Ref: https://stackoverflow.com/a/35904417
 git() {
     command git "$@"
-    local exit_code=$?
-    if [[ $exit_code -ne 0 ]]; then
+    local exit_code="$?"
+    if [[ "$exit_code" -ne 0 ]]; then
         printf "\n"
         printf "\033[1;31mERROR: git exited with code $exit_code\033[0m\n"
         printf "\n"
-        return $exit_code
+        return "$exit_code"
     fi
 }
 
@@ -52,7 +52,7 @@ alias sshptt="ssh ptt.cc -l bbsu"
 alias random="curl -X GET -H 'Cache-Control: no-cache' 'https://www.random.org/strings/?num=10&len=10&digits=on&upperalpha=on&loweralpha=on&unique=on&format=plain&rnd=new'"
 
 # Common exports
-export PATH=/usr/local/mysql/bin:/usr/local/sbin:/usr/local/bin:$HOME/.composer/vendor/bin:vendor/bin:node_modules/.bin:$PATH
+export PATH="/usr/local/mysql/bin:/usr/local/sbin:/usr/local/bin:$HOME/.composer/vendor/bin:vendor/bin:node_modules/.bin:$PATH"
 
 export HISTTIMEFORMAT="%F %T "
 export HISTCONTROL=ignoreboth
