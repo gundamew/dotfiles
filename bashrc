@@ -5,7 +5,7 @@
 [[ $(type -P brew) ]] && source $(brew --prefix)/etc/bash_completion || source /usr/share/bash-completion/bash_completion
 
 # bash_prompt
-[[ -f ~/.bash-powerline.sh ]] && source ~/.bash-powerline.sh
+[[ -f "$HOME/.bash-powerline.sh" ]] && source "$HOME/.bash-powerline.sh"
 
 # The next line updates PATH for the Google Cloud SDK.
 [[ -f /usr/local/google-cloud-sdk/path.bash.inc ]] && source /usr/local/google-cloud-sdk/path.bash.inc
@@ -14,7 +14,7 @@
 [[ -f /usr/local/google-cloud-sdk/completion.bash.inc ]] && source /usr/local/google-cloud-sdk/completion.bash.inc
 
 # Include some aliases and exports by OS
-[[ $(uname -s) = "Darwin" ]] && source ~/dotfiles/bashrc.macos || source ~/dotfiles/bashrc.linux
+[[ $(uname -s) = "Darwin" ]] && source "$HOME/dotfiles/bashrc.macos" || source "$HOME/dotfiles/bashrc.linux"
 
 # Add an error notification for Git
 # Ref: https://stackoverflow.com/a/35904417
@@ -31,8 +31,8 @@ git() {
 
 # Ensure to use WP-CLI files within the same scope
 wp() {
-    if [[ -x vendor/bin/wp ]]; then
-        vendor/bin/wp "$@"
+    if [[ -x ./vendor/bin/wp ]]; then
+        ./vendor/bin/wp "$@"
     else
         /usr/local/bin/wp "$@"
     fi
