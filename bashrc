@@ -39,7 +39,7 @@ wp() {
     if [[ -x ./vendor/bin/wp ]]; then
         ./vendor/bin/wp "$@"
     else
-        /usr/local/bin/wp "$@"
+        command wp "$@"
     fi
 }
 
