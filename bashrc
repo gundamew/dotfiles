@@ -67,6 +67,4 @@ export LC_ALL="zh_TW.UTF-8"
 export EDITOR="vim"
 export GIT_EDITOR="vim"
 
-export GREP_COLORS="fn:ln=33:se=37:mt=1;37;41"
-
 export TERM="xterm-256color"
