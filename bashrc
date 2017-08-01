@@ -7,6 +7,11 @@
 # bash_prompt
 [[ -f "$HOME/.bash-powerline.sh" ]] && source "$HOME/.bash-powerline.sh"
 
+# Set $PATH
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
+export PATH="/usr/local/mysql/bin:$PATH"
+export PATH="$PATH:./vendor/bin:$HOME/.composer/vendor/bin:node_modules/.bin"
+
 # The next line updates PATH for the Google Cloud SDK.
 [[ -f /usr/local/google-cloud-sdk/path.bash.inc ]] && source /usr/local/google-cloud-sdk/path.bash.inc
 
@@ -52,8 +57,6 @@ alias sshptt="ssh ptt.cc -l bbsu"
 alias random="curl -X GET -H 'Cache-Control: no-cache' 'https://www.random.org/strings/?num=10&len=10&digits=on&upperalpha=on&loweralpha=on&unique=on&format=plain&rnd=new'"
 
 # Common exports
-export PATH="/usr/local/mysql/bin:/usr/local/sbin:/usr/local/bin:$HOME/.composer/vendor/bin:vendor/bin:node_modules/.bin:$PATH"
-
 export HISTTIMEFORMAT="%F %T "
 export HISTCONTROL=ignoreboth
 export HISTFILE="/dev/null"
