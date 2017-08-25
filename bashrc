@@ -56,6 +56,9 @@ alias phpunit="phpunit --color"
 alias sshptt="ssh ptt.cc -l bbsu"
 alias random="curl -X GET -H 'Cache-Control: no-cache' 'https://www.random.org/strings/?num=10&len=10&digits=on&upperalpha=on&loweralpha=on&unique=on&format=plain&rnd=new'"
 
+alias shrug="echo '¯\_(ツ)_/¯' | pbcopy";
+alias fight="echo '(ง'̀-'́)ง' | pbcopy";
+
 # Common exports
 export HISTTIMEFORMAT="%F %T "
 export HISTCONTROL=ignoreboth
