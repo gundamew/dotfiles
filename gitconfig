@@ -19,6 +19,10 @@
     pager = diff-highlight | less
 [branch]
     autosetuprebase = always
+[pull]
+    rebase = preserve
+[rebase]
+    autoStash = true
 [diff]
     mnemonicprefix = true
     compactionHeuristic = true
