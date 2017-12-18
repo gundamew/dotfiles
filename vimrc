@@ -40,7 +40,7 @@ set fileformat=unix                          " Set the end-of-line to Unix style
 set fileformats=unix,dos,mac                 " Automatic end-of-line detection order
 
 set nobackup                                 " Do not backup
-set nowritebackup                            " Do not write backup
+set nowritebackup                            " Do not backup while editing
 set noswapfile                               " Do not use swapfile
 
 set backspace=indent,eol,start               " Allow the backspace/delete key to behave normally
