@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
 # Rename original files
 [[ -f ~/.bash_logout ]] && mv ~/.bash_logout ~/.bash_logout.orig
@@ -14,8 +15,10 @@ ln -s ~/dotfiles/gitconfig ~/.gitconfig
 ln -s ~/dotfiles/gitignore_global ~/.gitignore_global
 ln -s ~/dotfiles/vimrc ~/.vimrc
 
+# Initialize the submodules
+git submodule update --init
+
 # Install vim plugins
 mkdir -p ~/.vim/autoload
 ln -s ~/dotfiles/vim-plug/plug.vim ~/.vim/autoload/plug.vim
-git submodule update --init
 vim +PlugInstall +qall
