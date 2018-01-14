@@ -2,23 +2,22 @@
 
 ## Installation
 
-### 1. Cloning repository
+### 1. Clone repository
 
 ```shell
 $ cd ~
 $ git clone git@github.com:gundamew/dotfiles.git
 ```
 
-### 2. Running init script
+### 2. Run init script
 
 ```shell
 $ cd dotfiles/
 $ bash ./init.sh
 ```
 
-### 3. Install Homwbrew formulas
+### 3. Install Homebrew formulas
 
 ```shell
-$ cd dotfiles/
 $ bash ./brew.sh
 ```
