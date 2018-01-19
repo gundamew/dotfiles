@@ -9,7 +9,6 @@
 
 # Set $PATH
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
-export PATH="/usr/local/mysql/bin:$PATH"
 export PATH="$PATH:./vendor/bin:$HOME/.composer/vendor/bin:node_modules/.bin"
 
 # The next line updates PATH for the Google Cloud SDK.
