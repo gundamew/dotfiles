@@ -13,9 +13,7 @@ export PATH="$PATH:./vendor/bin:$HOME/.composer/vendor/bin:node_modules/.bin"
 
 # Env for Golang
 if [[ -d /usr/local/go ]]; then
-    export GOPATH="$HOME/workspace/golang"
-    export GOBIN="$GOPATH/bin"
-    export PATH="/usr/local/go/bin:$GOBIN:$PATH"
+    eval "$(direnv hook bash)"
 fi
 
 # The next line updates PATH for the Google Cloud SDK.
