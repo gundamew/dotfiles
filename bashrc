@@ -13,6 +13,7 @@ export PATH="$PATH:./vendor/bin:$HOME/.composer/vendor/bin:node_modules/.bin"
 
 # Env for Golang
 if [[ -d /usr/local/go ]]; then
+    export PATH="/usr/local/go/bin:$PATH"
     eval "$(direnv hook bash)"
 fi
 
