@@ -1,0 +1,17 @@
+# Highlight the matching text always
+--color
+
+# Ignore public path
+--ignore-dir=public
+
+# Ignore Laravel public storage
+--ignore-dir=storage
+
+# Ignore npm packages
+--ignore-dir=node_modules
+
+# Ignore Composer packages
+--ignore-dir=vendor
+
+# Search with case sensitivity if there is mixed case
+--smart-case
