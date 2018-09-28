@@ -19,8 +19,10 @@
     pager = diff-highlight | less
 [branch]
     autosetuprebase = always
+[branch "master"]
+    mergeoptions = --no-ff
 [pull]
-    rebase = preserve
+    rebase = true
 [rebase]
     autoStash = true
 [diff]
