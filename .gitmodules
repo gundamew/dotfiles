@@ -1,6 +1,6 @@
 [submodule "bash-powerline"]
-	path = bash-powerline
-	url = git@github.com:riobard/bash-powerline.git
+    path = bash-powerline
+    url = git@github.com:riobard/bash-powerline.git
 [submodule "vim-plug"]
-	path = vim-plug
-	url = https://github.com/junegunn/vim-plug
+    path = vim-plug
+    url = git@github.com:junegunn/vim-plug
