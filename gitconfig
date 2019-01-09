@@ -21,6 +21,8 @@
     autosetuprebase = always
 [branch "master"]
     mergeoptions = --no-ff
+[commit]
+    template = ~/.gitmessage
 [pull]
     rebase = true
 [rebase]

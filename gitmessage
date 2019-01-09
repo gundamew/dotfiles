@@ -1,0 +1,21 @@
+# <type>(<scope>): <subject>
+#
+# Type should be one of the following:
+# * docs     (changes to documentation)
+# * feat     (new feature)
+# * fix      (bug fix)
+# * refactor (refactoring production code)
+# * style    (formatting, missing semi colons, etc; no code change)
+# * test     (adding or refactoring tests; no production code change)
+# * chore    (updating Grunt tasks etc; no production code change)
+#
+# Scope could be anything specifying place of the commit change.
+#
+# Subject should always be able to complete the following sentence:
+# If applied, this commit will <subject>
+
+
+# Explain why this change is being made
+
+
+# Provide references to tickets, articles or other resources
