@@ -8,7 +8,7 @@
     st = status -s
     ci = commit
     co = checkout
-    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue bold)<%an>%Creset'
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(blue bold)<%an>%Creset'
     di = diff
     br = branch
 
