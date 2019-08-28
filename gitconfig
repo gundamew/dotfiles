@@ -15,6 +15,7 @@
 # Very core
 [core]
     autocrlf = input
+    safecrlf = true
     excludesfile = ~/.gitignore_global
     pager = diff-highlight | less
 [branch]
