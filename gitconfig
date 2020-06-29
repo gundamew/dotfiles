@@ -18,6 +18,7 @@
     autocrlf = input
     excludesfile = ~/.gitignore_global
     pager = diff-highlight | less
+    editor = 'subl' --wait
 [branch]
     autosetuprebase = always
 [branch "master"]
