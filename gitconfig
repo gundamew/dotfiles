@@ -1,8 +1,8 @@
 # Wow
 [user]
     name = Bing-Sheng Chen
-    useconfigonly = true
-	email = gundamew@gmail.com
+    email = gundamew@gmail.com
+    signingkey = B1432224FB515194E38A13909B4A000A7A6A4894
 
 # Such aliases
 [alias]
@@ -24,6 +24,7 @@
     mergeoptions = --no-ff
 [commit]
     template = ~/.gitmessage
+    gpgsign = true
 [pull]
     rebase = true
 [rebase]
@@ -62,3 +63,5 @@
     added = yellow
     changed = green
     untracked = cyan
+[gpg]
+    program = gpg
