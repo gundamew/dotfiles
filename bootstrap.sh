@@ -8,7 +8,8 @@ set -euo pipefail
 [[ -f ~/.vimrc ]] && mv ~/.vimrc ~/.vimrc.orig
 
 # Create symbolic links
-ln -s ~/zshrc ~/.zshrc
+ln -s ~/dotfiles/zprofile ~/.zprofile
+ln -s ~/dotfiles/zshrc ~/.zshrc
 ln -s ~/dotfiles/gitconfig ~/.gitconfig
 ln -s ~/dotfiles/gitignore_global ~/.gitignore_global
 ln -s ~/dotfiles/gitmessage ~/.gitmessage
