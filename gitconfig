@@ -16,24 +16,24 @@
 # Very core
 [core]
     autocrlf = input
-    excludesfile = ~/.gitignore_global
+    excludesFile = ~/.gitignore_global
     pager = diff-highlight | less
     editor = 'subl' --wait
 [branch]
-    autosetuprebase = always
+    autoSetupRebase = always
 [branch "master"]
-    mergeoptions = --no-ff
+    mergeOptions = --no-ff
 [checkout]
     defaultRemote = origin
 [commit]
     template = ~/.gitmessage
-    gpgsign = true
+    gpgSign = true
 [pull]
     rebase = true
 [rebase]
     autoStash = true
 [diff]
-    mnemonicprefix = true
+    mnemonicPrefix = true
     compactionHeuristic = true
 [pager]
     log = diff-highlight | less
