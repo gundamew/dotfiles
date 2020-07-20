@@ -23,6 +23,8 @@
     autosetuprebase = always
 [branch "master"]
     mergeoptions = --no-ff
+[checkout]
+    defaultRemote = origin
 [commit]
     template = ~/.gitmessage
     gpgsign = true
@@ -37,6 +39,8 @@
     log = diff-highlight | less
     show = diff-highlight | less
     diff = diff-highlight | less
+[gpg]
+    program = gpg
 
 # So much color
 [color]
@@ -64,5 +68,3 @@
     added = yellow
     changed = green
     untracked = cyan
-[gpg]
-    program = gpg
