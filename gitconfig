@@ -2,7 +2,6 @@
 [user]
     name = Bing-Sheng Chen
     email = gundamew@gmail.com
-    signingkey = B1432224FB515194E38A13909B4A000A7A6A4894
 
 # Such aliases
 [alias]
@@ -18,7 +17,7 @@
     autocrlf = input
     excludesFile = ~/.gitignore_global
     pager = diff-highlight | less
-    editor = 'subl' --wait
+    editor = code --wait
 [branch]
     autoSetupRebase = always
 [branch "master"]
@@ -27,7 +26,6 @@
     defaultRemote = origin
 [commit]
     template = ~/.gitmessage
-    gpgSign = true
 [pull]
     rebase = true
 [rebase]
@@ -39,8 +37,6 @@
     log = diff-highlight | less
     show = diff-highlight | less
     diff = diff-highlight | less
-[gpg]
-    program = gpg
 
 # So much color
 [color]
