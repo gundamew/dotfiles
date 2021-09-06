@@ -3,14 +3,17 @@
     name = Bing-Sheng Chen
     email = gundamew@gmail.com
 
-# Such aliases
+# Such alias
 [alias]
-    st = status -s
+    st = status
     ci = commit
     co = checkout
-    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(blue bold)<%an>%Creset'
+    lg = log --pretty=lg
     di = diff
     br = branch
+	alias = config --get-regexp ^alias\\.
+[pretty]
+	lg = %Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(blue bold)<%an>%Creset
 
 # Very core
 [core]
