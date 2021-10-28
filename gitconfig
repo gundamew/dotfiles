@@ -33,6 +33,8 @@
     rebase = true
 [rebase]
     autoStash = true
+[diff]
+    algorithm = patience
 [pager]
     log = diff-highlight | less
     show = diff-highlight | less
