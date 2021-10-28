@@ -33,9 +33,6 @@
     rebase = true
 [rebase]
     autoStash = true
-[diff]
-    mnemonicPrefix = true
-    compactionHeuristic = true
 [pager]
     log = diff-highlight | less
     show = diff-highlight | less
